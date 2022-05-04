@@ -1,4 +1,4 @@
-(define (domain dwr)
+(define (domain dwr2)
   (:requirements :strips :typing :negative-preconditions)
 
   (:types
@@ -39,24 +39,24 @@
     :effect (and  (loaded ?r ?c) (not (unloaded ?r)) (empty ?k) (not (holding ?k ?c)))
   )
 
-  ; unloads a robot holding a container with a nearby crane
+  ; unloads a loaded robot with its attached crane
   (:action unload
     :parameters (?k - crane ?r - robot ?c - container ?l - location)
     :precondition (and (belong ?k ?r) (at ?r ?l) (loaded ?r ?c) (empty ?k) (not (equal ?c pallet)))
     :effect (and (unloaded ?r) (holding ?k ?c) (not (loaded ?r ?c)) (not (empty ?k)))
   )
 
-  ; puts a container held by a crane on a pile
+  ; puts a container held by a crane (attached to a robot) on a pile
   (:action put
     :parameters (?r - robot ?k - crane ?c - container ?c2 - container ?p - pile ?l - location)
     :precondition (and (at ?r ?l) (belong ?k ?r) (attached ?p ?l) (holding ?k ?c) (top ?c2 ?p) (not (equal ?c ?c2)) (not (equal ?c pallet)))
     :effect (and (in ?c ?p) (top ?c ?p) (on ?c ?c2) (not (top ?c2 ?p)) (not (holding ?k ?c)) (empty ?k))
   )
 
-  ; takes a container from a pile with a crane
+  ; takes a container from a pile with the robot-attached crane
   (:action take
     :parameters (?r - robot ?k - crane ?c - container ?c2 - container ?p - pile ?l - location)
     :precondition (and (at ?r ?l) (belong ?k ?r) (attached ?p ?l) (empty ?k) (in ?c ?p) (top ?c ?p) (on ?c ?c2) (not (equal ?c ?c2)) (not (equal ?c pallet)))
-    :effect (and (holding ?k ?r) (top ?c2 ?p) (not (in ?c ?p)) (not (top ?c ?p)) (not (on ?c ?c2)) (not (empty ?k)))
+    :effect (and (holding ?k ?c) (top ?c2 ?p) (not (in ?c ?p)) (not (top ?c ?p)) (not (on ?c ?c2)) (not (empty ?k)))
   )
 )

@@ -1,8 +1,8 @@
 (define (problem pb2)
-  (:domain dwr)
+  (:domain dwr2)
   (:objects
     r1 r2 - robot
-    l1 l2 l3 - location
+    l1 l2 l3 l4 - location
     k1 k2 - crane
     p1 q1 p2 q2 - pile
     ca cb cc cd ce cf pallet - container
@@ -10,7 +10,10 @@
   (:init
     (adjacent l1 l2) (adjacent l2 l1)
     (adjacent l1 l3) (adjacent l3 l1)
+    (adjacent l1 l4) (adjacent l4 l1)
+    (adjacent l2 l4) (adjacent l4 l2)
     (adjacent l2 l3) (adjacent l3 l2)
+    (adjacent l4 l3) (adjacent l3 l4)
     (attached p1 l1) (attached q1 l1)
     (attached p2 l2) (attached q2 l2)
     (belong k1 r1)
@@ -31,5 +34,5 @@
     (empty k2)
     (equal ca ca) (equal cb cb) (equal cc cc) (equal cd cd) (equal ce ce) (equal cf cf) (equal pallet pallet)
   )
-  (:goal (and (in ca p1) (in cb p1)))
+  (:goal (and (in ca p2) (in cb p2)))
 )

@@ -254,8 +254,8 @@ if __name__ == '__main__':
     #domain = sys.argv[0]
     #problem = sys.argv[1]
 
-    domain = "examples/dwr/dwr2.pddl"
-    problem = "examples/dwr/pb2.pddl"
+    #domain = "examples/dwr/dwr2.pddl"
+    #problem = "examples/dwr/pb2.pddl"
     
     parser = PDDL_Parser()
     

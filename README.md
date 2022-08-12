@@ -10,6 +10,8 @@ Specifically, in an attempt to model more realistic aspects of relevant real-lif
 
 In practise the PDDL parser became available by minorly adapting the functionality developed by the user: meneguzzi in the following URL: https://github.com/pucrs-automated-planning/pddl-parser.
 
+This work has been part of my Master-of-Science thesis on Artificial Intelligence, in the Computer Science Department of the Aristotle University of Thessaloniki, Greece.
+
 # Source (to be translated in English):
 Ο κώδικας υλοποιήθηκε με βασικό μεταφραστή την έκδοση της Python 3.8 για Windows καθώς κατά την περίοδο ανάπτυξής του η έκδοση 3.8.2 ήταν η πιο πρόσφατη σταθερή (stable) έκδοση της Python. Το περιβάλλον υλοποίησης ήταν το Jupyter IDE για Windows. Ο κώδικας στο Jupyter Notebook αποτελείται από 43 αυτόνομα κελιά τα οποία εκτείνονται σε οριακά πάνω από 1000 γραμμές συνολικά. Τα 43 αυτά κελιά μπορούν να ομαδοποιηθούν σε τρεις μεγάλες κατηγορίες:
 + Κελιά 1-14: είναι ο κώδικας γενικού σκοπού και οι συναρτήσεις διαχείρισης των κατάλληλων δομών του parser αλλά και οι συμβατές υλοποιήσεις των βασικών συναρτήσεων αναζήτησης.

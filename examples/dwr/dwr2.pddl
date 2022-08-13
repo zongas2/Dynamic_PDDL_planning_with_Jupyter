@@ -32,7 +32,7 @@
     :effect (and (at ?r ?to) (not (occupied ?from)) (occupied ?to) (not (at ?r ?from)))
   )
 
-  ; loads an empty robot with a container held by a nearby crane
+  ; loads an empty robot with a container held by the robot-attached crane
   (:action load
     :parameters (?k - crane ?r - robot ?c - container ?l - location)
     :precondition (and (at ?r ?l) (belong ?k ?r) (holding ?k ?c) (unloaded ?r) (not (equal ?c pallet)))

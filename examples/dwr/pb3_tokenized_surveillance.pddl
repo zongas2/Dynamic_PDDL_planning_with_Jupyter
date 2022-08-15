@@ -1,11 +1,11 @@
 (define (problem pb2)
   (:domain dwr2)
   (:objects
-    r1 r2 - robot
+    r1 - robot
     l1 l2 l3 l4 l5 l6 l7 - location
-    k1 k2 - crane
-    p1 q1 p2 p3 p4 p5 p6 p7 - pile
-    ca cb cc cd ce cf pallet - container
+    k1 - crane
+    p1 p2 p3 p4 p5 p6 p7 - pile
+    ca cb cc pallet - container
   )
   (:init
     (adjacent l1 l2) (adjacent l2 l1)
@@ -46,13 +46,11 @@
     ; (attached p15 l15)
 
     (belong k1 r1)
-    (belong k2 r2)
+    ; (belong k2 r2)
     ; (belong k3 r3)
 
     (in ca p1) (in cb p1) (in cc p1)
-    (in cd q1) (in ce q1) (in cf q1)
     (top cc p1) (on cc cb) (on cb ca) (on ca pallet)
-    (top cf q1) (on cf ce) (on ce cd) (on cd pallet)
     (top pallet p2)
     ; (top pallet q2)
     (top pallet p3)
@@ -73,19 +71,19 @@
     (unloaded r1)
     (occupied l1)
 
-    (at r2 l3)
-    (unloaded r2)
-    (occupied l3)
+    ; (at r2 l3)
+    ; (unloaded r2)
+    ; (occupied l3)
 
     ; (at r3 l7)
     ; (unloaded r3)
     ; (occupied l7)
 
     (empty k1)
-    (empty k2)
+    ; (empty k2)
     ; (empty k3)
 
-    (equal ca ca) (equal cb cb) (equal cc cc) (equal cd cd) (equal ce ce) (equal cf cf) (equal pallet pallet)
+    (equal ca ca) (equal cb cb) (equal cc cc) (equal pallet pallet)
   )
-  (:goal (and (in cd p7) (in ce p7) (in cf p7) ))
+  (:goal (and (in ca p3) ))
 )

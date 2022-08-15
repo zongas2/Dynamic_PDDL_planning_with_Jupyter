@@ -4,7 +4,7 @@
     r1 r2 r3 - robot
     l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l15 - location
     k1 k2 k3 - crane
-    p1 q1 p2 q2 p5 p12 p14 - pile
+    p1 q1 p2 q2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 - pile
     ca cb cc cd ce cf pallet - container
   )
   (:init
@@ -31,9 +31,19 @@
 
     (attached p1 l1) (attached q1 l1)
     (attached p2 l2) (attached q2 l2)
+    (attached p3 l3)
+    (attached p4 l4)
     (attached p5 l5)
+    (attached p6 l6)
+    (attached p7 l7)
+    (attached p8 l8)
+    (attached p9 l9)
+    (attached p10 l10)
+    (attached p11 l11)
     (attached p12 l12)
+    (attached p13 l13)
     (attached p14 l14)
+    (attached p15 l15)
 
     (belong k1 r1)
     (belong k2 r2)
@@ -45,9 +55,19 @@
     (top cf q1) (on cf ce) (on ce cd) (on cd pallet)
     (top pallet p2)
     (top pallet q2)
+    (top pallet p3)
+    (top pallet p4)
     (top pallet p5)
+    (top pallet p6)
+    (top pallet p7)
+    (top pallet p8)
+    (top pallet p9)
+    (top pallet p10)
+    (top pallet p11)
     (top pallet p12)
+    (top pallet p13)
     (top pallet p14)
+    (top pallet p15)
 
     (at r1 l1)
     (unloaded r1)
@@ -67,5 +87,5 @@
 
     (equal ca ca) (equal cb cb) (equal cc cc) (equal cd cd) (equal ce ce) (equal cf cf) (equal pallet pallet)
   )
-  (:goal (and (in ca p2) (in cb p2) (in cd p5) (in ce p12) (in cf p14) ))
+  (:goal (and (in cd p5) (in ce p12) (in cf p14) ))
 )

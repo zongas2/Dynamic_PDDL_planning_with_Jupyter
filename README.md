@@ -1,4 +1,4 @@
-Changes (wrt v1.0.0-alpha): Removed unecessary external script files to keep the release clean; Removed a termination bug in Cell 42; Separated the disturbance likelihood parameters in Cell 43: between random actions application and unexpected events at random step; Fixed bug for terminating, resetting new_change_applied to False after it becomes True, in Cell 43. Added new functions (see Cells 34-37) for dynamically manipulating goal facts as well.
+Changes (wrt v1.0.0-alpha): Removed unecessary external script files to keep the release clean; Removed a termination bug in Cell 42; Separated the disturbance likelihood parameters in Cell 43: between random actions application and unexpected events at random step; Fixed bug for terminating, resetting new_change_applied to False after it becomes True, in Cell 43. Added new functions (see Cells 34-37) for dynamically manipulating goal facts as well. Fixed surveillance coverage reward calculation functions.
 
 # Dynamic PDDL planning with Jupyter:
 

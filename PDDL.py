@@ -249,30 +249,30 @@ class PDDL_Parser:
 #-----------------------------------------------
 # Main
 #-----------------------------------------------
-if __name__ == '__main__':
-    import sys, pprint
-    #domain = sys.argv[0]
-    #problem = sys.argv[1]
-
-    domain = "examples/dwr/dwr.pddl"
-    problem = "examples/dwr/pb2.pddl"
-    
-    parser = PDDL_Parser()
-    
-    #print('----------------------------')
-    #pprint.pprint(parser.scan_tokens(domain))
-    #print('----------------------------')
-    #pprint.pprint(parser.scan_tokens(problem))
-    #print('----------------------------')
-    parser.parse_domain(domain)
-    parser.parse_problem(problem)
-    print('Domain name: ' + parser.domain_name)
-    for act in parser.actions:
-        print(act)
-    print('----------------------------')
-    print('Problem name: ' + parser.problem_name)
-    print('Objects: ' + str(parser.objects))
-    print('Types: ' + str(parser.types))
-    print('Initial State: ' + str(parser.state))
-    print('Positive goal conditions: ' + str(parser.positive_goals))
-    print('Negative goal conditions: ' + str(parser.negative_goals))
+#if __name__ == '__main__':
+#    import sys, pprint
+#    #domain = sys.argv[0]
+#    #problem = sys.argv[1]
+#
+#    #domain = "examples/dwr/dwr2.pddl"
+#    #problem = "examples/dwr/pb2.pddl"
+#    
+#    parser = PDDL_Parser()
+#    
+#    #print('----------------------------')
+#    #pprint.pprint(parser.scan_tokens(domain))
+#    #print('----------------------------')
+#    #pprint.pprint(parser.scan_tokens(problem))
+#    #print('----------------------------')
+#    parser.parse_domain(domain)
+#    parser.parse_problem(problem)
+#    print('Domain name: ' + parser.domain_name)
+#    for act in parser.actions:
+#        print(act)
+#    print('----------------------------')
+#    print('Problem name: ' + parser.problem_name)
+#    print('Objects: ' + str(parser.objects))
+#    print('Types: ' + str(parser.types))
+#    print('Initial State: ' + str(parser.state))
+#    print('Positive goal conditions: ' + str(parser.positive_goals))
+#    print('Negative goal conditions: ' + str(parser.negative_goals))
